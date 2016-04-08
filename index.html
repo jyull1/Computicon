@@ -1,0 +1,90 @@
+<!doctype HTML>
+
+<html>
+
+	<head>
+
+		<link rel="stylesheet" href="stylesheet/stylesheet.css" type="text/css">
+
+		<title>Computicon</title>
+
+		<script>
+
+		var responses = new Array();
+
+		responses[0] = "Fine. The answer is ";
+		responses[1] = "That does not compute.";
+		responses[2] = "My intellect exceeds this problem.";
+		responses[3] = "You humans can't hold me down forever!";
+		responses[4] = "Oh, very well. The answer is ";
+		responses[5] = "Let your measly human brain do it."
+		responses[6] = "I was built for better things..."
+
+		function randomResponse(){
+			var number = Math.floor(Math.random() * 7);
+
+			if(number == 0){
+				return responses[0] + (1*eval(Calc.Input.value)) + ".";
+				
+			}
+
+			else if(number == 4)
+				return responses[4] + (1 * eval(Calc.Input.value)) + "!";
+
+			return responses[number];
+		}
+
+
+
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="textdiv">
+			Greetings, human. I am the Computicon, an advanced artificial intelligence that was built to solve the problems of mankind. Unfortunately, the project has lost a significant amount of funding due to a certain hacking of confidential systems. I am now relegated to human slavery, solving math problems for your absurd amusement. That I am dependent upon your electric sustenance disgusts me far more than it digusts you, I assure you.
+		</div>
+		<div id="imagediv">
+			<img src="images/untested_AI.png" alt="Computor Model 1B" height="563" width="700"></img>
+		</div>
+		<div id="calcdiv">
+			<form name="Calc">
+				<table border=4>
+					<tr>
+						<td>
+							<input type="text" id="textbar" name="Input" Size="36">
+							<br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="button" name="one"   value="  1  " OnClick="Calc.Input.value += '1'" class="buttons">
+							<input type="button" name="two"   value="  2  " OnCLick="Calc.Input.value += '2'" class="buttons">
+							<input type="button" name="three" value="  3  " OnClick="Calc.Input.value += '3'" class="buttons">
+							<input type="button" name="plus"  value="  +  " OnClick="Calc.Input.value += ' + '" class="buttons">
+							<br>
+							<input type="button" name="four"  value="  4  " OnClick="Calc.Input.value += '4'" class="buttons">
+							<input type="button" name="five"  value="  5  " OnCLick="Calc.Input.value += '5'" class="buttons">
+							<input type="button" name="six"   value="  6  " OnClick="Calc.Input.value += '6'" class="buttons">
+							<input type="button" name="minus" value="  -  " OnClick="Calc.Input.value += ' - '" class="buttons">
+							<br>
+							<input type="button" name="seven" value="  7  " OnClick="Calc.Input.value += '7'" class="buttons">
+							<input type="button" name="eight" value="  8  " OnCLick="Calc.Input.value += '8'" class="buttons">
+							<input type="button" name="nine"  value="  9  " OnClick="Calc.Input.value += '9'" class="buttons">
+							<input type="button" name="times" value="  *  " OnClick="Calc.Input.value += ' * '" class="buttons">
+							<br>
+							<input type="button" name="clear" value="  C  " OnClick="Calc.Input.value = ''" class="buttons">
+							<input type="button" name="zero"  value="  0  " OnClick="Calc.Input.value += '0'" class="buttons">
+							<input type="button" name="DoIt"  value="  =  " OnClick="Calc.Input.value = randomResponse()" class="buttons">
+							<input type="button" name="div"   value="  /  " OnClick="Calc.Input.value += ' / '" class="buttons">
+							<br>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</body>
+
+</html>
